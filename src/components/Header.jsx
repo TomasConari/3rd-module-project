@@ -10,6 +10,7 @@ const Header = () => {
 
     const [wishlist, setWishlist] = useState(true);
     const [cart, setCart] = useState(true);
+    const [search, setSearch] = useState(true);
 
     return(
         <header>
@@ -35,8 +36,8 @@ const Header = () => {
                     <div id="rightMiddleBar">
                         <div id="rightMiddleBarOptions">
                             <div className="options" id='searchBar'>
-                                <input type='text'></input>
-                                <FontAwesomeIcon icon={faSearch} className="fa-light" />
+                                <FontAwesomeIcon onClick={() => setSearch(!search)} icon={faSearch} className="fa-light" />
+                                <input className="searchBar" id={search ? "shownCart" : ""} type='text'></input>
                             </div>
                             <div className="options" id='cart' onClick={() => setCart(!cart)}>
                                 <FontAwesomeIcon icon={faCartShopping} className="fa-light" />
