@@ -115,3 +115,6 @@ div {
 .searchBar:focus {
   outline: none;
 }
+.productImages{
+  width: 20vh;
+}
