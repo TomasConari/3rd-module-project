@@ -8,20 +8,30 @@ import { Deployable } from './Deployable';
 
 const Header = () => {
 
-    const [wishlist, setWishlist] = useState(true);
-    const [cart, setCart] = useState(true);
-    const [search, setSearch] = useState(true);
+    const [deployableState, setDeployableState] = useState({
+        wishlist: false,
+        cart: false,
+        search: false
+    });
+
+    const deploy = (target) => {
+        setDeployableState(prevState => ({
+          ...prevState,
+          [target]: !prevState[target]
+        }));
+    };
+        
 
     return(
-        <header>
+        <header id='header'>
             <div id="bar">
                 <div id="middleBar">
                     <div id="leftMiddleBar">
-                        <div id='wishlist' onClick={() => setWishlist(!wishlist)}>
+                        <div id='wishlist' onClick={() => deploy("wishlist")}>
                             <FontAwesomeIcon icon={faHeart} className="fa-light" />
                         </div>
-                        <div className="wishlistStyle" id={wishlist ? "shownCart" : ""}>
-                            <Deployable />
+                        <div className={`wishlistStyle ${deployableState.wishlist ? 'shown' : ''}`}>
+                            <Deployable type={"wishlistDesign"} tittle={"Wishlist"}/>
                         </div>
                     </div>
                     <div id="centerMiddleBar">
@@ -35,19 +45,21 @@ const Header = () => {
                     </div>
                     <div id="rightMiddleBar">
                         <div id="rightMiddleBarOptions">
-                            <div className="options" id='searchBar'>
-                                <FontAwesomeIcon onClick={() => setSearch(!search)} icon={faSearch} className="fa-light" />
-                                <input className="searchBar" id={search ? "shownCart" : ""} type='text'></input>
+                            <div className="options" id='searchBar' onClick={() => deploy("search")}>
+                                <FontAwesomeIcon icon={faSearch} className="fa-light" />
                             </div>
-                            <div className="options" id='cart' onClick={() => setCart(!cart)}>
+                            <div className="options" id='cart' onClick={() => deploy("cart")}>
                                 <FontAwesomeIcon icon={faCartShopping} className="fa-light" />
-                            </div>
-                            <div className="cartStyle" id={cart ? "shownCart" : ""}>
-                                <Deployable />
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="searchContainer">
+                <input className={`searchBar ${deployableState.search ? 'shown' : ''}`} type='text' placeholder=' Search...'></input>
+            </div>
+            <div className={`cartStyle ${deployableState.cart ? 'shown' : ''}`}>
+                <Deployable type={"cartDesign"} tittle={"Cart"} />
             </div>
         </header>
     );

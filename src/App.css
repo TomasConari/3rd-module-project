@@ -3,20 +3,6 @@
   outline: none;
 }
 
-.wishlistStyle {
-  background-color: aquamarine;
-  position: fixed;
-}
-
-.cartStyle {
-  background-color: azure;
-  position: fixed;
-}
-
-#shownCart {
-  display: none;
-}
-
 #bar {
   line-height: 51px;
   padding: 33px 0;
@@ -46,7 +32,7 @@ div {
 #centerMiddleBar {
   display: flex;
   align-items: center;
-  transform: translate(50%);
+  transform: translate(30%);
 }
 
 #rightMiddleBar {
@@ -81,4 +67,54 @@ div {
 .tittle{
   display: flex;
   align-content: center;
+}
+.fa-light:hover{
+  cursor: pointer;
+}
+.wishlistDesign{
+  position: fixed;
+}
+.searchContainer {
+  display: flex;
+  justify-content: center;
+}
+.wishlistStyle {
+  background-color: aquamarine;
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wishlistStyle.shown {
+  opacity: 1;
+}
+
+.cartStyle {
+  background-color: azure;
+  position: fixed;
+  right: 15vh;
+  top: 20vh;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cartStyle.shown {
+  opacity: 1;
+}
+.searchBar {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px;
+  outline: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.searchBar.shown {
+  opacity: 1;
+}
+.searchBar:focus {
+  outline: none;
+}
+#header{
+  margin: 0%;
 }

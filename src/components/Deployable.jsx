@@ -1,7 +1,7 @@
-export const Deployable = () => {
+export const Deployable = ({type, tittle}) => {
     return(
-        <div id="wishlist">
-            <h1>Wishlist</h1>
+        <div className={type}>
+            <h3>{tittle}</h3>
         </div>
     );
-}; 
+};
