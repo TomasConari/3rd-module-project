@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+#bar {
+  line-height: 51px;
+  padding: 33px 0;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#middleBar {
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+div {
+  display: block;
+}
+
+#leftMiddleBar {
+  display: flex;
+  align-items: center;
+}
+
+#centerMiddleBar {
+  display: flex;
+  align-items: center;
+  transform: translate(30%);
+}
+
+#rightMiddleBar {
+  display: flex;
+  align-items: center;
+}
+
+#rightMiddleBarOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.options * {
+  padding: 0 20px;
+}
+
+#rightMiddleBarOptions #searchBar + #cart {
+  border-left: 1px solid #464646;
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  #middleBar {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  #rightMiddleBar {
+    margin-top: 10px;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.tittle{
+  display: flex;
+  align-content: center;
+}
+.fa-light:hover{
+  cursor: pointer;
+}
+.wishlistDesign{
+  position: fixed;
+}
+.searchContainer {
+  display: flex;
+  justify-content: center;
+}
+.wishlistStyle {
+  background-color: aquamarine;
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+.wishlistStyle.shown {
+  opacity: 1;
 }
 
-.read-the-docs {
-  color: #888;
+.cartStyle {
+  background-color: azure;
+  position: fixed;
+  right: 15vh;
+  top: 20vh;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cartStyle.shown {
+  opacity: 1;
+}
+.searchBar {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px;
+  outline: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.searchBar.shown {
+  opacity: 1;
+}
+.searchBar:focus {
+  outline: none;
 }
