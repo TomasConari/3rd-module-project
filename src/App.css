@@ -74,17 +74,12 @@ div {
   cursor: pointer;
 }
 
-.wishlistDesign {
-  position: fixed;
-}
-
 .searchContainer {
   display: flex;
   justify-content: center;
 }
 
 .wishlistStyle {
-  background-color: aquamarine;
   position: fixed;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -94,11 +89,14 @@ div {
   opacity: 1;
 }
 
+.showMessage {
+  opacity: 0;
+  max-height: 0.5vh;
+}
+
 .cartStyle {
-  background-color: azure;
   position: fixed;
   right: 15vh;
-  top: 20vh;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -166,4 +164,51 @@ div {
 
 .item.expanded .productImages {
   width: 40vh;
+}
+.deployableImages{
+  height: 5vh;
+}
+.wishlistDesign{
+  margin-top: 5vh;
+  margin-left: 3vh;
+  background-color: white;
+  padding-right: 3vh;
+  padding-left: 3vh;
+  border-radius: 10px;
+  border: 1px solid black;
+  position: fixed;
+  max-width: 30%;
+}
+.cartDesign{
+  margin-top: 5vh;
+  right: 25vh;
+  background-color: white;
+  padding-right: 3vh;
+  padding-left: 3vh;
+  border-radius: 10px;
+  border: 1px solid black;
+  position: fixed;
+  max-width: 30%;
+}
+.li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.li > div {
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  padding-right: 3vh;
+}
+button {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 3px;
+  border-color: #fff;
+  color: #fff;
+  background: #414040;
+  transition: background-color 0.3s ease-in-out;
+  font-family: "Raleway", sans-serif;
 }

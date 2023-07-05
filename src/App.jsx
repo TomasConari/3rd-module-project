@@ -11,8 +11,8 @@ const App = () => {
 
   return (
     <div>
-      <Header searchState={search} setSearchState={setSearch} />
-      <Content searchState={search} />
+      <Header searchState={search} setSearchState={setSearch} wish={wishlist} setWish={setWishlist} cart={cart} setCart={setCart} />
+      <Content searchState={search} setCartState={setCart} setWishState={setWishlist}/>
     </div>
   );
 };

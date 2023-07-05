@@ -6,7 +6,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Deployable } from './Deployable';
 
-const Header = ({ searchState , setSearchState}) => {
+const Header = ({ searchState , setSearchState, wish, setWish, cart, setCart}) => {
 
     const [deployableState, setDeployableState] = useState({
         wishlist: false,
@@ -30,7 +30,7 @@ const Header = ({ searchState , setSearchState}) => {
                             <FontAwesomeIcon icon={faHeart} className="fa-light" />
                         </div>
                         <div className={`wishlistStyle ${deployableState.wishlist ? 'shown' : ''}`}>
-                            <Deployable type={'wishlistDesign'} tittle={'Wishlist'} />
+                            <Deployable type={'wishlistDesign'} tittle={'Wishlist'} state={wish} setState={setWish}/>
                         </div>
                     </div>
                     <div id="centerMiddleBar">
@@ -48,12 +48,12 @@ const Header = ({ searchState , setSearchState}) => {
                             <div id="cart" className="options" onClick={() => deploy('cart')}>
                                 <FontAwesomeIcon icon={faCartShopping} className="fa-light" />
                             </div>
+                            <div className={`cartStyle ${deployableState.cart ? 'shown' : ''}`}>
+                                <Deployable type={'cartDesign'} tittle={'Cart'} state={cart} setState={setCart}/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={`cartStyle ${deployableState.cart ? 'shown' : ''}`}>
-                <Deployable type={'cartDesign'} tittle={'Cart'} />
             </div>
     </header>
 
