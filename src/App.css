@@ -131,13 +131,13 @@ div {
   padding: 10px;
 }
 
-
 .item {
   width: calc(20% - 2vh);
   height: fit-content;
   padding: 1.5vh;
   margin: 1vh;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 .item:hover {
@@ -157,25 +157,13 @@ div {
   max-height: 100%;
   object-fit: contain;
   width: 20vh;
+  transition: all 0.3s ease;
 }
 
-#items {
-  margin-top: 5vh;
-  max-height: 60vh;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #ccc #f1f1f1;
+.item.expanded {
+  width: calc(40% - 2vh);
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #aaa;
-  border-radius: 5px;
-}
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #f1f1f1;
-}
-.itemContent {
-  height: 15vh;
-  display: flex;
+.item.expanded .productImages {
+  width: 40vh;
 }

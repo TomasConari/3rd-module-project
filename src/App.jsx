@@ -6,6 +6,8 @@ import { Content } from './components/Content';
 const App = () => {
 
   const [search, setSearch] = useState(false);
+  const [wishlist, setWishlist] = useState([]);
+  const [cart, setCart] = useState([]);
 
   return (
     <div>
