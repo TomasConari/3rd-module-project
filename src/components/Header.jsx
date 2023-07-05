@@ -34,13 +34,11 @@ const Header = ({ searchState , setSearchState}) => {
                         </div>
                     </div>
                     <div id="centerMiddleBar">
-                        <a href="/" className="title">
-                            <img
-                                src={commerceLogo}
-                                alt="commerceLogo"
-                                className="imageLogo"
-                            />
-                        </a>
+                        <img
+                            src={commerceLogo}
+                            alt="commerceLogo"
+                            className="imageLogo"
+                        />
                     </div>
                     <div id="rightMiddleBar">
                         <div id="rightMiddleBarOptions">
