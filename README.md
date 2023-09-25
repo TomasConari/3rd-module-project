@@ -14,11 +14,19 @@ How to see it?
 
 Project Info:
 
-  -This project fetches data from the FakeStoreApi, 
-    specifically from this endpoint: "https://fakestoreapi.com/products?limit=30", 
+    -This project fetches data from FakeStoreApi's api,
+    specifically from this endpoint: "https://fakestoreapi.com/products?limit=30",
     it retrieves 30 products and displays them on the page.
 
-  -You can click on a product to expand its information and show buttons to add it to the cart or wishlist. In both cases,
-    you can remove products. In the cart, you can also purchase them, and upon successful purchase, the cart is emptied.
+    -You can click on a product to expand its information and show buttons to add it to the cart or wishlist. 
+    In both cases, you can remove products. In the cart, you can also purchase them, and upon successful purchase,
+    the cart is emptied.
 
-  -The application also features a search bar for products.
+    -The application also features a search bar for products.
+
+My Links:
+
+    -Linkedin: https://www.linkedin.com/in/tomascontreras1307/
+    -Github: https://github.com/TomasConari
+    -Email: tomasconari@gmail.com
+    
