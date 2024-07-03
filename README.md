@@ -1,4 +1,4 @@
-# ECommerce-with-React-thirdModuleProyect
+# ECommerce Web App
 Basic E-commerce made with ReactJS
 
 Although the project has been delivered, there are plans to improve it.
