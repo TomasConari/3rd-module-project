@@ -55,8 +55,7 @@ const Header = ({ searchState , setSearchState, wish, setWish, cart, setCart}) =
                     </div>
                 </div>
             </div>
-    </header>
-
+        </header>
     );
 };
 
